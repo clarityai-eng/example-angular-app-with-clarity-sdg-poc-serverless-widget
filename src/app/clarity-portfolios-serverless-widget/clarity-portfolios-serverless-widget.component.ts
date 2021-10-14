@@ -10,7 +10,7 @@ export class ClarityPortfoliosServerlessWidgetComponent implements AfterViewInit
 
   @ViewChild('ref', {static: false}) widgetComponentRef!: ElementRef;
 
-  widgetOriginDomain = 'https://go.clarity.ai';
+  widgetOriginDomain = location.search && decodeURIComponent(location.search.replace('?env=', '')) || 'https://go.clarity.ai';
   customizationObject = {
     // fontFamily: 'Times New Roman',
     // Google fonts can also be used:
